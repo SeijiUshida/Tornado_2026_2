@@ -47,10 +47,10 @@ body {
 }
 
 .brand-name {
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: 0.02em;
-  color: #f3f4fb;
+  display: block;
+  width: 120px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .menu-btn {
