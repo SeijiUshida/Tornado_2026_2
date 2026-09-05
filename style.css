@@ -47,10 +47,10 @@ body {
 }
 
 .brand-name {
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: 0.02em;
-  color: #f3f4fb;
+  display: block;
+  width: 120px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .menu-btn {
@@ -170,26 +170,47 @@ body {
   justify-content: center;
   gap: 10px;
   text-decoration: none;
+  background: rgba(46, 57, 105, 0.82);
   box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
-.action-tile.diary {
+.action-tile:hover,
+.action-tile:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.35);
   background: linear-gradient(155deg, #6f7bf2 0%, #5762e0 60%, #4b57d6 100%);
 }
 
-.action-tile.call {
-  background: rgba(35, 44, 82, 0.75);
+.action-tile:focus-visible {
+  outline: 2px solid #f4c95d;
+  outline-offset: 3px;
+}
+
+.tile-icon {
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.action-tile:hover .tile-icon,
+.action-tile:focus .tile-icon {
+  transform: scale(1.14);
+  filter: drop-shadow(0 0 7px rgba(244, 201, 93, 0.85));
+}
+
+.action-tile.diary {
   border: 1px solid rgba(255,255,255,0.06);
 }
 
 .tile-label {
   font-size: 13px;
   font-weight: 700;
-  color: #f5f5fb;
+  color: #fbfaf6;
+  transition: color 0.2s ease;
 }
 
-.action-tile.call .tile-label {
-  color: #8a90ad;
+.action-tile:hover .tile-label,
+.action-tile:focus .tile-label {
+  color: #f4c95d;
 }
 
 .badge {
